@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*colors*/
+:root{
+    --footer-color: black;
+    --text-color: white;
+    --button-color: red;
+    --button-color-hover: darkred;
+    --bg-control: url(assets/bg-control.png);
+}
+
+/*general settings*/
+body *{
+    font-family: 'Pixelify Sans', cursive;
+    color: var(--text-color);
+}
+
+body{
+    background: var(--bg-color);
+}
+
+/*top of page*/
+#top{
+    height: 100px;
+    background: var(--footer-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#top p{
+    font-size: 60px;
+}
+
+/*container*/
+#container{
+    display: flex;
+    height: 700px;
+}
+
+#warning{
+    background: white;
+    flex: 30%;
+}
+
+#warning p{
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    background: red;
+}
+
+/*control*/
+#control{
+    background: var(--bg-control) no-repeat center /cover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 70%;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+
+#control button{
+    width: 190px;
+    height: 190px;
+    background: var(--button-color) url(assets/arrow.svg) no-repeat center;
+    background-size: 90px;
+    border-radius: 50%;
+    border: none;
+}
+
+#control button:hover{
+    background-color: var(--button-color-hover);
+    box-shadow: 0px 0px 15px black;
+}
+
+#control-top{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#control-mid{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#control-bottom{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+#control-l{
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+#control-r{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+#left{
+    rotate: 180deg;
+}
+
+#front{
+    rotate: -90deg;
+}
+
+#back{
+    rotate: 90deg;
+}
+
+/*footer*/
+footer{
+    height: 100vh;
+    background: var(--footer-color);
+    text-align: center;
+}
+
+footer p{
+    padding-top: 50px;
+    font-size: 25px;
+}
+
+@media (max-width: 700px){
+    #container{
+        flex-direction: column;
+    }
+
+    #warning{
+        flex: 1;
+    }
+
+    #control{
+        width: 100%;
+        flex: 1;
+    }
+
+    #control button{
+        width: 90px;
+        height: 90px;
+        background-size: 60px;
+    }
+}
